@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.adrianulbona</groupId>
+    <groupId>io.github.odd</groupId>
     <artifactId>cloc</artifactId>
-    <version>0.3.3-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Country Locator</name>
-    <description>A Java library able to localize GeoHashes within countries</description>
-    <url>http://adrianulbona.github.io/cloc/</url>
+    <description>A Java library able to localize GeoHashes within countries (based on https://adrianulbona.github.io/cloc/) </description>
+    <url>https://odd.github.io/cloc/</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,22 +27,23 @@
             <name>Adrian Bona</name>
             <email>adrianulbona@gmail.com</email>
         </developer>
+        <developer>
+            <name>Odd Möller</name>
+            <email>odd.moller@gmail.com</email>
+        </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:adrianulbona/cloc.git</connection>
-        <developerConnection>scm:git:git@github.com:adrianulbona/cloc.git</developerConnection>
-        <url>git@github.com:adrianulbona/cloc.git</url>
+        <connection>scm:git:git@github.com:odd/cloc.git</connection>
+        <developerConnection>scm:git:git@github.com:odd/cloc.git</developerConnection>
+        <url>git@github.com:odd/cloc.git</url>
     </scm>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>github</id>
+            <name>GitHub Odd Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/odd/cloc</url>
         </repository>
     </distributionManagement>
 
@@ -75,6 +76,9 @@
         </plugins>
     </build>
 
+    <activeProfile>
+        <activeProfile>release</activeProfile>
+    </activeProfile>
     <profiles>
         <profile>
             <id>release</id>
